@@ -1,0 +1,344 @@
+
+.pantry-page {
+    min-height: 100vh;
+    padding: 40px 7% 70px;
+    background:
+        radial-gradient(circle at 90% 5%, rgba(255,255,255,0.14), transparent 20%),
+        linear-gradient(135deg, #263B70, #526B9B);
+}
+
+/* PAGE HEADER */
+
+.pantry-page .welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 38px 45px;
+    margin-bottom: 38px;
+    background: #FAF5E9;
+    border-radius: 24px;
+}
+
+.pantry-page .welcome-text {
+    max-width: 650px;
+}
+
+.pantry-page .section-label {
+    margin-bottom: 10px;
+    color: #7588B5;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.pantry-page .welcome-text h1 {
+    color: #263B70;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.pantry-page .welcome-text h1 span {
+    color: #7588B5;
+    font-size: 25px;
+}
+
+.pantry-page .welcome-description {
+    max-width: 500px;
+    margin-top: 16px;
+    color: #68738A;
+    line-height: 1.7;
+}
+
+/* FOOD COUNT */
+
+.pantry-page .welcome-date {
+    min-width: 145px;
+    padding: 22px;
+    text-align: center;
+    background: #DCE6F2;
+    border-radius: 20px;
+}
+
+.pantry-page .welcome-date span {
+    color: #7588B5;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.pantry-page .welcome-date h2 {
+    margin: 8px 0 2px;
+    color: #263B70;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 48px;
+}
+
+.pantry-page .welcome-date p {
+    color: #68738A;
+    font-size: 13px;
+}
+
+/* FOOD COLLECTION */
+
+.pantry-page .attention-section {
+    padding: 32px 36px;
+    background: #FAF5E9;
+    border-radius: 24px;
+}
+
+.pantry-page .section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.pantry-page .section-heading h2 {
+    color: #263B70;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 28px;
+}
+
+.pantry-page .section-note {
+    color: #7588B5;
+    font-size: 13px;
+}
+
+.pantry-page .attention-description {
+    margin: 10px 0 24px;
+    color: #68738A;
+    font-size: 14px;
+}
+
+/* FOOD GRID */
+
+.pantry-page .food-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* FOOD CARD */
+
+.pantry-page .food-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 14px;
+
+    background:
+        linear-gradient(145deg, #EAF0F7, #F0EDE3) padding-box,
+        linear-gradient(
+            135deg,
+            #7588B5,
+            #C5B9D9,
+            #B8C6D9,
+            #7588B5
+        ) border-box;
+
+    border: 1.5px solid transparent;
+    border-radius: 20px;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pantry-page .food-card:nth-child(3n + 2) {
+    background:
+        linear-gradient(145deg, #F0EDE3, #EAF0F7) padding-box,
+        linear-gradient(
+            135deg,
+            #B8C6D9,
+            #C5B9D9,
+            #7588B5
+        ) border-box;
+}
+
+.pantry-page .food-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(117, 136, 181, 0.18);
+}
+
+/* FOOD PHOTO */
+
+.pantry-page .food-photo {
+    width: 100%;
+    height: 155px;
+    overflow: hidden;
+    background: #DCE6F2;
+    border-radius: 15px;
+}
+
+.pantry-page .food-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+}
+
+/* FOOD DETAILS */
+
+.pantry-page .food-details {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 3px 3px;
+}
+
+.pantry-page .food-category {
+    margin-bottom: 5px;
+    color: #7588B5;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.pantry-page .food-details h3 {
+    margin-bottom: 5px;
+    color: #263B70;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 20px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.pantry-page .food-quantity {
+    margin-bottom: 12px;
+    color: #68738A;
+    font-size: 14px;
+}
+
+/* STOCK STATUS */
+
+.pantry-page .food-status {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.pantry-page .status-available {
+    color: #39765C;
+    background: #D9EBDD;
+}
+
+.pantry-page .status-low {
+    color: #9A7130;
+    background: #F5E8C9;
+}
+
+.pantry-page .status-empty {
+    color: #A34F55;
+    background: #F2DCDC;
+}
+
+/* EXPIRY INFORMATION */
+
+.pantry-page .pantry-expiry {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 13px;
+    color: #68738A;
+    font-size: 12px;
+}
+
+.pantry-page .pantry-expiry strong {
+    color: #263B70;
+}
+
+.pantry-page .food-expiry {
+    margin-top: 5px;
+    color: #7588B5;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE - TABLET */
+
+@media (max-width: 900px) {
+    .pantry-page {
+        padding: 30px 5% 55px;
+    }
+
+    .pantry-page .food-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pantry-page .welcome-section {
+        padding: 32px;
+    }
+
+    .pantry-page .attention-section {
+        padding: 28px;
+    }
+}
+
+/* RESPONSIVE - MOBILE */
+
+@media (max-width: 540px) {
+    .pantry-page {
+        padding: 22px 5% 40px;
+    }
+
+    .pantry-page .welcome-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+
+    .pantry-page .welcome-text h1 {
+        font-size: 34px;
+    }
+
+    .pantry-page .welcome-text h1 span {
+        font-size: 21px;
+    }
+
+    .pantry-page .welcome-date {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 12px;
+        padding: 15px 18px;
+    }
+
+    .pantry-page .welcome-date h2 {
+        margin: 0;
+        font-size: 38px;
+    }
+
+    .pantry-page .attention-section {
+        padding: 22px 18px;
+    }
+
+    .pantry-page .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .pantry-page .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .pantry-page .food-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .pantry-page .food-photo {
+        height: 180px;
+    }
+}
+
+.pantry-page .welcome-section,
+.pantry-page .attention-section {
+    background-color: #E2EAF8;
+}

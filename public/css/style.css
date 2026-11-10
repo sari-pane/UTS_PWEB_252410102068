@@ -1,0 +1,235 @@
+
+/* LOCAL FONTS */
+
+@font-face {
+    font-family: 'Fredoka';
+    src: url('../fonts/Fredoka/Fredoka.ttf') format('truetype');
+    font-weight: 300 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito/Nunito.ttf') format('truetype');
+    font-weight: 200 1000;
+    font-style: normal;
+}
+
+
+/* COLOR PALETTE */
+
+:root {
+    --navy: #263B70;
+    --navy-deep: #1E2D55;
+    --ocean: #526FA8;
+    --periwinkle: #7588B5;
+    --blue-soft: #B8C6D9;
+
+    --cream: #F2E5C9;
+    --cream-light: #FAF5E9;
+    --beige: #D8C9A8;
+
+    --ink: #30364B;
+    --muted: #77788A;
+
+    --leaf: #587A75;
+    --butter: #D8C9A8;
+    --tomato: #A65F5A;
+
+    --olive: var(--navy-deep);
+    --sage: var(--cream);
+    --white: var(--cream-light);
+}
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* GLOBAL */
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--navy);
+    color: var(--cream);
+}
+
+main {
+    min-height: 100vh;
+}
+
+
+/* TYPOGRAPHY */
+
+h1,
+h2,
+h3,
+h4,
+.navbar-logo a {
+    font-family: 'Fredoka', sans-serif;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background-color: var(--navy-deep);
+    border-bottom: 1px solid var(--periwinkle);
+}
+
+.navbar-logo a {
+    text-decoration: none;
+    color: var(--cream);
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.navbar-logo span {
+    color: var(--blue-soft);
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.navbar-menu a {
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    color: var(--cream);
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: var(--blue-soft);
+}
+
+
+/* NAVBAR TOGGLE */
+
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.navbar-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--cream);
+    border-radius: 3px;
+}
+
+
+/* RESPONSIVE NAVBAR */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        position: absolute;
+        top: 100%;
+        right: 5%;
+        width: max-content;
+        min-width: 150px;
+        padding: 18px 22px;
+        background-color: var(--olive);
+        border-radius: 0 0 10px 10px;
+        z-index: 10;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+}
+
+
+/* FOOTER */
+
+.footer {
+    padding: 25px 7%;
+    text-align: center;
+    background-color: var(--navy-deep);
+    border-top: 1px solid var(--periwinkle);
+    color: var(--blue-soft);
+    font-size: 12px;
+}
+
+
+/* GLOBAL TYPOGRAPHY - STRONGER TEXT */
+
+/* Tulisan umum */
+body {
+    font-weight: 600;
+}
+
+/* Paragraf dan teks deskripsi */
+p {
+    font-weight: 600;
+}
+
+/* Label dan keterangan */
+label,
+span {
+    font-weight: 600;
+}
+
+/* Navigasi */
+.navbar a,
+.navbar span {
+    font-weight: 700;
+}
+
+/* Judul */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+/* Informasi penting */
+strong,
+b {
+    font-weight: 800;
+}
+
+/* Input dan tombol */
+input,
+button,
+textarea,
+select {
+    font-weight: 600;
+}
