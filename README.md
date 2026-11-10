@@ -1,59 +1,144 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# PeaKeep 🥛 
+Your Pantry, Your Little World
+
+PeaKeep adalah website pengelolaan persediaan bahan makanan pribadi yang dirancang untuk membantu pengguna memantau dan mengorganisasi bahan makanan di rumah.
+
+Website ini dikembangkan menggunakan Laravel dengan pendekatan Model-View-Controller (MVC) dan Blade Template sebagai bagian dari proyek Ujian Tengah Semester (UTS) mata kuliah Pemrograman Web.
+
+Mengusung tema *playful little pantry* dengan nuansa Sea Bloom, PeaKeep menghadirkan tampilan modern, playful, dan ramah pengguna agar kegiatan memantau persediaan bahan makanan terasa lebih praktis.
+
+**Tema pengelolaan:** Pengelolaan persediaan bahan makanan (*personal pantry management*), meliputi pemantauan jumlah persediaan, kategori, status ketersediaan, dan tanggal kedaluwarsa.
+
+**Dibuat oleh:** Sari Oktaviani Pane — NIM 252410102068
+
+---
+
+## 📸 Tampilan Website
+
+| Login | Dashboard |
+|:---:|:---:|
+| ![Login](screenshots/login.png) | ![Dashboard](screenshots/dashboard.png) |
+
+| My Profile | My Pantry |
+|:---:|:---:|
+| ![Profile](screenshots/profile.png) | ![Pantry](screenshots/pantry.png) |
+
+---
+
+## ✨ Fitur Utama
+
+- **Login:** Halaman masuk untuk pengguna sebelum mengakses fitur utama PeaKeep. Login menggunakan simulasi tanpa autentikasi database.
+- **Dashboard:** Menampilkan sapaan pengguna, informasi tanggal, ringkasan persediaan, kutipan, pengingat, dan daftar bahan makanan yang perlu diperhatikan.
+- **My Profile:** Menampilkan informasi akun berupa nama dan username pengguna yang sedang digunakan.
+- **My Pantry (Pengelolaan):** Menampilkan daftar bahan makanan beserta gambar, kategori, jumlah persediaan, status ketersediaan, dan informasi kedaluwarsa.
+
+---
+
+## 🚀 Teknologi yang Digunakan
+
+| Teknologi | Kegunaan |
+|---|---|
+| Laravel 12 | Framework pengembangan aplikasi web |
+| PHP | Bahasa pemrograman sisi server |
+| Blade Template | Menyusun tampilan halaman menggunakan template Laravel |
+| HTML | Membuat struktur halaman website |
+| CSS | Mengatur desain, warna, tata letak, dan responsivitas |
+| JavaScript | Mendukung interaksi pada navigasi website |
+
+---
+
+## 🗂️ Struktur File Utama
+
+| File | Fungsi |
+|---|---|
+| `routes/web.php` | Mengatur alamat URL dan menghubungkannya dengan Controller |
+| `app/Http/Controllers/PageController.php` | Mengelola data dan menyiapkan data yang dikirimkan ke View |
+| `resources/views/layouts/app.blade.php` | Layout utama website menggunakan `@yield` dan `@stack` |
+| `resources/views/login.blade.php` | Halaman login |
+| `resources/views/dashboard.blade.php` | Halaman dashboard |
+| `resources/views/pengelolaan.blade.php` | Halaman pengelolaan bahan makanan |
+| `resources/views/profile.blade.php` | Halaman profil pengguna |
+| `resources/views/components/navbar.blade.php` | Komponen navigasi website |
+| `resources/views/components/footer.blade.php` | Komponen footer website |
+| `public/css/` | Menyimpan file CSS untuk desain website |
+| `public/js/` | Menyimpan file JavaScript |
+| `public/foods/` | Menyimpan gambar bahan makanan |
+| `public/fonts/` | Menyimpan font lokal yang digunakan website |
+
+---
+
+## ⚙️ Instalasi dan Setup
+
+Berikut langkah-langkah untuk menjalankan PeaKeep di komputer lokal.
+
+**1. Clone repository**
+
+```bash
+git clone https://github.com/sari-pane/UTS_PWEB_252410102068.git
+```
+
+**2. Masuk ke direktori project**
+
+```bash
+cd UTS_PWEB_252410102068
+```
+
+**3. Install dependency Laravel**
+
+```bash
+composer install
+```
+
+**4. Salin file environment**
+
+Buat file `.env` berdasarkan `.env.example`.
+
+**5. Generate application key**
+
+```bash
+php artisan key:generate
+```
+
+**6. Jalankan server Laravel**
+
+```bash
+php artisan serve
+```
+
+**7. Buka website**
+
+Akses alamat berikut melalui browser:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+## 🔄 Alur Penggunaan Website
+
+1. Pengguna membuka website dan masuk melalui halaman Login.
+2. Setelah login, pengguna diarahkan menuju Dashboard.
+3. Pengguna dapat melihat ringkasan persediaan dan informasi bahan makanan.
+4. Pengguna dapat membuka My Profile untuk melihat informasi akun.
+5. Pengguna dapat membuka My Pantry untuk melihat daftar dan informasi persediaan bahan makanan.
+
+---
+
+## 📝 Catatan Implementasi
+
+- Website dikembangkan menggunakan pendekatan MVC (Model-View-Controller) pada Laravel.
+- Data contoh pengguna dan bahan makanan dikelola melalui Controller dan dikirimkan ke View.
+- Data bahan makanan disimpan dalam bentuk array statis di `PageController`, bukan melalui database.
+- Website ini merupakan simulasi pengelolaan persediaan dan tidak menerapkan operasi CRUD maupun penyimpanan data permanen.
+- Informasi pengguna diteruskan melalui request parameter sesuai alur aplikasi.
+
+---
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+
+**PeaKeep — Your Pantry, Your Little World.**
+
+Made with care for Pemrograman Web UTS.
+
 </p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
